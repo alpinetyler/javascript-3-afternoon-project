@@ -136,5 +136,11 @@ const purchases = [{"owner":"Barry","price":103},{"owner":"Bob","price":75},
   Use a high order method to create to get the sum of bobsTotal.
 */
 
-let bobsTotal //Code Here
-
+//Code Here
+var bobsTotal = purchases.reduce(function(total, element) {
+  if(element.owner === 'Bob'){
+  total += element.price
+   console.log(element.price)
+} return total
+}, 0);
+bobsTotal
